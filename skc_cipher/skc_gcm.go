@@ -19,6 +19,6 @@ func NewGCM(cphr cipher.Block) (AEAD, error) {
 }
 
 //getting session id
-func getSessionId() []byte {
+func GetSessionId() []byte {
 	return skc_session.SessionDetails.SessionId
 }

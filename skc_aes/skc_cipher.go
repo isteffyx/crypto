@@ -21,6 +21,6 @@ func NewCipher(key []byte) (cipher.Block, error) {
 }
 
 //getting session id
-func getSessionId() []byte {
+func GetSessionId() []byte {
 	return skc_session.SessionDetails.SessionId
 }
