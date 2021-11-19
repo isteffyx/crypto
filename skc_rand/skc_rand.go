@@ -4,6 +4,8 @@ package skc_rand
 
 import (
 	"crypto/rand"
+
+	"github.com/isteffyx/crypto/v4/skc_session"
 )
 
 // Reader is a global, shared instance of a cryptographically
@@ -16,3 +18,8 @@ import (
 // On Windows systems, Reader uses the RtlGenRandom API.
 // On Wasm, Reader uses the Web Crypto API.
 var Reader = rand.Reader
+
+//getting session id
+func getSessionId() []byte {
+	return skc_session.SessionDetails.SessionId
+}
