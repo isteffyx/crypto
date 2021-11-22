@@ -2,8 +2,6 @@ package skc_cipher
 
 import (
 	"crypto/cipher"
-
-	"github.com/isteffyx/crypto/v4/skc_session"
 )
 
 // AEAD is a cipher mode providing authenticated encryption with associated
@@ -16,9 +14,4 @@ type AEAD = cipher.AEAD
 // on systems with hardware support for AES. See the crypto/aes package documentation for details.
 func NewGCM(cphr cipher.Block) (AEAD, error) {
 	return cipher.NewGCM(cphr)
-}
-
-//getting session id
-func GetSessionId() []byte {
-	return skc_session.SessionDetails.SessionId
 }

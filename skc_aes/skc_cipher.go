@@ -8,8 +8,6 @@ import (
 	"crypto/cipher"
 
 	"crypto/aes"
-
-	"github.com/isteffyx/crypto/v4/skc_session"
 )
 
 // NewCipher creates and returns a new cipher.Block.
@@ -18,9 +16,4 @@ import (
 // AES-128, AES-192, or AES-256.
 func NewCipher(key []byte) (cipher.Block, error) {
 	return aes.NewCipher(key)
-}
-
-//getting session id
-func GetSessionId() []byte {
-	return skc_session.SessionDetails.SessionId
 }
